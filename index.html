@@ -13,9 +13,9 @@
             <a href="./index.html" class="logo">Miracle</a>
             <nav>
                 <ul>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">My skills</a></li>
-                    <li><a href="#">Hire me</a></li>
+                    <li class="my-work"><a>My Works</a></li>
+                    <li class="my-skills"><a>My skills</a></li>
+                    <li class="hire-me"><a>Hire me</a></li>
                 </ul>
             </nav>
         </header>
@@ -137,60 +137,23 @@
             <a href="#"><img src="https://bestanimations.com/media/mirror-balls/1003091756disco-ball-animated-gif-4.gif" alt="" srcset=""></a>
         </div>
     </section>
+    <footer class="footer">
+        <div>Like what you see?<span><div class="div1"> Hire me </div>  <div class="div2"></div></span></div>
+        <header>
+            <a href="./index.html" class="logo">Miracle</a>
+            <nav>
+                <ul>
+                    <li class="my-work"><a>My Works</a></li>
+                    <li class="my-skills"><a>My skills</a></li>
+                    <li class="hire-me"><a>Hire me</a></li>
+                </ul>
+            </nav>
+            <!-- <span><img src="" alt=""></span> -->
+        </header>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        var tl = gsap.timeline();
-
-        tl.from('.content', {
-            y:'-30%',
-            opacity: 0,
-            duration: 2,
-            ease: Power4.easeOut
-        })
-        tl.from('.stagger1', {
-            opacity: 0,
-            y: -50,
-            stagger: .3,
-            ease: Power4.easeOut,
-            duration: 2
-        }, "-=1.5")
-        tl.from('.hero-design', {
-            opacity: 0, 
-            y: 50,
-            ease: Power4.easeOut,
-            duration: 1,
-        },"-=2")
-        gsap.from(".used", {
-            opacity:0,
-            stagger: .3,
-            scale: 0.1,
-            duration: 1,
-            ease: Back.easeOut.config(1.7)
-        })
-        gsap.from('.transition2',{
-            ScrollTrigger:{
-                trigger:'transition2',
-                start: 'top bottom',
-            },
-            y: 50,
-            opacity: 0,
-            duration: 1,
-            stagger: .9
-        })
-        gsap.from('.transition3',{
-            ScrollTrigger:{
-                trigger:'transition3',
-                start: 'top center',
-            },
-            y: 50,
-            opacity: 0,
-            duration: 2.2,
-            stagger: .9
-        })
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

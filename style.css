@@ -6,12 +6,24 @@
         transform: translateY(32px);
     }
 }
+@keyframes HireAnim {
+    from{
+        box-shadow: 1px 1px 5px 5px;
+    }to{
+        box-shadow: none;
+    }
+}
+*{
+    scroll-behavior: smooth;
+}
 body{
     height: 100vh;
     margin: 0;
     font-family: 'Poppins' ,Arial, Helvetica, sans-serif;
 }
-
+.HireAnim{
+    animation: HireAnim .5s ease-in-out .2s infinite alternate-reverse;
+}
 ul{
     list-style-type: none;
     margin: 0;
@@ -220,6 +232,89 @@ header nav ul{
     background-color: white;
     visibility: visible;
 }
+.footer>header{
+    display: none;
+}
+.footer{
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.footer>header{
+    background: linear-gradient( rgba(67, 69, 194, 0.527), rgba(62, 81, 165, 0.466)), url(./images/geometric-shapes-wall-art-1-removebg-preview-removebg-preview.png);
+    color: white;
+    background-position: center;
+    background-size: contain;
+    height: 70px;
+    place-items: center;
+    font-size: larger;
+}
+.footer>header>nav>ul>li{
+    padding:  0 2em ;
+}
+.footer>header>nav{
+    margin-right: 5%;
+}
+.footer::before{
+    /* content: url(./images/artboard_71_copy_8_4x-removebg-preview.png); */
+    position: absolute;
+    /* width: 200px; */
+    /* height: 200px; */
+    border-radius: 50%;
+    /* background-color: #bfffdf; */
+    bottom: 0px;
+    left: 0;
+    z-index: 0;
+}
+.footer>div{
+    background: #64ff92;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid; */
+    padding: 25px 0;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+.footer>div>span{
+    background: white;
+    position: relative;
+    margin: 0 3px;
+    padding: 2px ;
+    border: #4c56da 1px solid;
+    border-radius: 5px;
+    color: #4c56da;
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid; */
+}
+.footer>div>span:hover{
+    color: white;
+    background: #4c56da;
+}
+.footer>div>span .div1{
+    padding:0 5px;
+    margin: 0;
+    /* border: 1px solid; */
+}
+.footer>div>span .div2{
+    border: 1px solid;
+    position: absolute;
+    bottom: 2px;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    width: 0px;
+    background-color: #4c56da;
+    display: flex;
+    visibility: hidden;
+    transition: width .5s, visibility .1s .1s;
+}
 
 @media (min-width: 800px) {
     .featured, .portfolio{
@@ -247,6 +342,10 @@ header nav ul{
     }
     .portfolio-container img{
         margin-left: 2em;
+    }
+    .footer>div{
+        justify-content: space-between;
+        padding: 2em 2em;
     }
 }
 @media (min-width: 1050px){
@@ -310,6 +409,93 @@ header nav ul{
         float: right;
         max-width: 500px;
     }
+    .content h1{
+        max-width: 300px;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    .footer>header{
+        background: linear-gradient( rgba(67, 69, 194, 0.527), rgba(62, 81, 165, 0.466)), url(./images/geometric-shapes-wall-art-1-removebg-preview-removebg-preview.png);
+        color: white;
+        background-position: center;
+        background-size: contain;
+        height: 70px;
+        place-items: center;
+        font-size: larger;
+    }
+    .footer>header>nav>ul>li{
+        padding:  0 2em ;
+    }
+    .footer>header>nav{
+        margin-right: 5%;
+    }
+    .footer::before{
+        /* content: url(./images/artboard_71_copy_8_4x-removebg-preview.png); */
+        position: absolute;
+        /* width: 200px; */
+        /* height: 200px; */
+        border-radius: 50%;
+        /* background-color: #bfffdf; */
+        bottom: 0px;
+        left: 0;
+        z-index: 0;
+    }
+    
+    .footer>div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid; */
+        padding-bottom: 25px;
+        font-size: larger;
+        font-weight: bold;
+        font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    }
+    .footer>div>span{
+        position: relative;
+        margin: 0 3px;
+        padding: 0 ;
+        border: none;
+        background: transparent;
+        color: #4c56da;
+        display: flex;
+        font-weight: 600;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        /* border: 1px solid; */
+    }
+    .footer>div>span .div1{
+        padding:0 5px;
+        margin: 0;
+        /* border: 1px solid; */
+    }
+    .footer>div>span .div2{
+        border: 1px solid;
+        position: absolute;
+        bottom: 2px;
+        padding: 0;
+        margin: 0;
+        height: 0px;
+        width: 0px;
+        background-color: #4c56da;
+        display: flex;
+        visibility: hidden;
+        transition: width .5s, visibility .1s .1s;
+    }
+    .footer>div>span:hover .div2{
+        width: 70px;
+        visibility: visible;
+        transition: width .5s, visibility .1s ;
+    }
+    .footer>div>span:hover{
+        background: transparent;
+        color: #4c56da;
+    }
 }
 @media (min-width: 1250px) {
     header{
@@ -324,6 +510,88 @@ header nav ul{
     .hero .content{
         padding: 6em 8em 6em 10em;
     }
+    .footer{
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    .footer>header{
+        background: linear-gradient( rgba(67, 69, 194, 0.527), rgba(62, 81, 165, 0.466)), url(./images/geometric-shapes-wall-art-1-removebg-preview-removebg-preview.png);
+        color: white;
+        background-position: center;
+        background-size: contain;
+        height: 70px;
+        place-items: center;
+        font-size: larger;
+    }
+    .footer>header>nav>ul>li{
+        padding:  0 2em ;
+    }
+    .footer>header>nav{
+        margin-right: 5%;
+    }
+    .footer::before{
+        /* content: url(./images/artboard_71_copy_8_4x-removebg-preview.png); */
+        position: absolute;
+        /* width: 200px; */
+        /* height: 200px; */
+        border-radius: 50%;
+        /* background-color: #bfffdf; */
+        bottom: 0px;
+        left: 0;
+        z-index: 0;
+    }
+    .footer>div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid; */
+        padding-bottom: 25px;
+        font-size: larger;
+        font-weight: bold;
+        font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    }
+    .footer>div>span{
+        position: relative;
+        margin: 0 3px;
+        padding: 0 ;
+        border: none;
+        background: transparent;
+        color: #4c56da;
+        display: flex;
+        font-weight: 600;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        /* border: 1px solid; */
+    }
+    .footer>div>span .div1{
+        padding:0 5px;
+        margin: 0;
+        /* border: 1px solid; */
+    }
+    .footer>div>span .div2{
+        border: 1px solid;
+        position: absolute;
+        bottom: 2px;
+        padding: 0;
+        margin: 0;
+        height: 0px;
+        width: 0px;
+        background-color: #4c56da;
+        display: flex;
+        visibility: hidden;
+        transition: width .5s, visibility .1s .1s;
+    }
+    .footer>div>span:hover .div2{
+        width: 70px;
+        visibility: visible;
+        transition: width .5s, visibility .1s ;
+    }
+    .footer>div>span:hover{
+        background: transparent;
+        color: #4c56da;
+    }
 }
 @media (min-width: 1550px) {
     header{
@@ -337,5 +605,9 @@ header nav ul{
     }
     .hero .content{
         padding: 9em 20em 6em 20em;
+    }
+    .footer>header{
+        background: #3f48cc;
+        color: white;
     }
 }
