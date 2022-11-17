@@ -18,7 +18,7 @@
 }
 body{
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     font-family: 'Poppins' ,Arial, Helvetica, sans-serif;
     width: 100%;
@@ -358,7 +358,7 @@ header nav ul{
 }
 @media (min-width: 1050px){
     .hero{
-        height: 90vh;
+        height: 600px;
     }
     .nav-container{
         display: grid;
