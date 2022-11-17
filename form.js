@@ -1,7 +1,6 @@
 const loadingCount = document.querySelector('.loading-count')
 const main = document.querySelector('main')
 let count = 0
-let int = setInterval(blur, 30)
 function blur(){
     count++
     if(count>99){
@@ -16,4 +15,4 @@ function blur(){
 function scale (number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
-document.addEventListener(('load'), blur)
+document.addEventListener(('load'), setInterval(blur, 30))
