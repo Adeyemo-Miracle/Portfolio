@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto:ital,wght@0,100;1,300&display=swap');
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(235, 235, 235);
+    opacity: 1;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(235, 235, 235);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(235, 235, 235);
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 200;
+  }
+  
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#1e942e79, #00270de8),  url(https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loading-count{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+}
+main{
+    filter: blur(30px);
+}
+
+form{
+    width: 100%;
+}
+.main-div div{
+    margin: 1.5em;
+    width: 500px;
+    display: flex;
+}
+
+input, textarea{
+    outline: none;
+    padding: 0 5px;
+    color: white;
+    margin: 0;
+    width: 100%;
+    background: transparent;
+    border: 1px rgb(185, 185, 185) solid;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.submit-button{
+    font-weight: 200;
+}
+
+input{
+    height: 30px;
+}
+
+.double{
+    display: flex;
+    justify-content: space-between;
+}
+.double input{
+    width: 47%;
+}
+@media (max-height: 350px) {
+    body{
+        height: 350px;
+    }
+}
