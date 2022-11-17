@@ -17,9 +17,15 @@
     scroll-behavior: smooth;
 }
 body{
+    display: flex;
     height: 100vh;
     margin: 0;
     font-family: 'Poppins' ,Arial, Helvetica, sans-serif;
+    width: 100%;
+    justify-content: center;
+}
+body>div{
+    max-width: 1550px;
 }
 .HireAnim{
     animation: HireAnim .5s ease-in-out .2s infinite alternate-reverse;
