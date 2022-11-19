@@ -271,17 +271,6 @@ header nav ul{
 .footer>header>nav{
     margin-right: 5%;
 }
-.footer::before{
-    /* content: url(./images/artboard_71_copy_8_4x-removebg-preview.png); */
-    position: absolute;
-    /* width: 200px; */
-    /* height: 200px; */
-    border-radius: 50%;
-    /* background-color: #bfffdf; */
-    bottom: 0px;
-    left: 0;
-    z-index: 0;
-}
 .footer>div{
     background: #64ff92;
     display: flex;
@@ -322,6 +311,47 @@ header nav ul{
     display: flex;
     visibility: hidden;
     transition: width .5s, visibility .1s .1s;
+}
+
+@media (max-width: 450px) {
+    @keyframes scroll {
+        0%{
+            transform: translateY(0px);
+        }100%{
+            transform: translateY(25px);
+        }
+    }
+    .nav-container ul a{
+        font-size: smaller;
+        margin: 0;
+        padding: 0 .5em;
+    }
+    header{
+        padding: 1.5em;
+    }
+    .hero{
+        padding: 3em;
+    }
+    .hero h1{
+        font-size: 1.5em;
+    }
+    .footer{
+        font-size: smaller;
+    }
+    .meet{
+        font-size: smaller;
+    }
+    .scroll{
+        height: 40px;
+        width: 15px
+    }
+    .scroll .scroll-circle{
+        margin: 2px 1.5px;
+        height: 10px;
+        width: 65%;
+        border-radius: 50%
+    }
+
 }
 
 @media (min-width: 800px) {
