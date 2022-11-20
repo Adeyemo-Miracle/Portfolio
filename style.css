@@ -85,11 +85,13 @@ header nav ul{
     color: #ff64cb;
     justify-content: center;
 }.meet span img{
-    height: 15px;
+    height: 15px; width: auto;
     margin-top: 1.3em;
 }.meet span{
     margin-right: .5em;
 }.scroll{
+    display: flex;
+    justify-content: center;
     border: white 3px solid;
     border-radius: 30px;
     height: 60px; width: 25px;
@@ -152,14 +154,20 @@ header nav ul{
     margin-bottom: 1em;
 }
 .skills-container ul li .icon-container{
-    height: 100px;
-    display: grid;
-    place-content: center;
+    height: 100px; width: 100%;
+    /* display: grid;
+    place-content: center; */
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
 }
 .skills-container ul li img{
-    height: 90px;
+    height: 90px; width: 40%;
 }
+.skills-container ul li:nth-of-type(2) img{
+    width: 100%;
+}
+
 .skills-container ul li .skill-title{
     font-weight: bold;
 }
@@ -348,7 +356,7 @@ header nav ul{
     .scroll .scroll-circle{
         margin: 2px 1.5px;
         height: 10px;
-        width: 65%;
+        width: 60%;
         border-radius: 50%
     }
 
