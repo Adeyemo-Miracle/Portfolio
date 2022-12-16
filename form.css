@@ -7,6 +7,7 @@
   }
   *{
     box-sizing: border-box;
+    transition: all
   }
 
 @keyframes animation {
@@ -55,15 +56,23 @@ body{
     overflow: hidden;
 }
 .double>input:active{
-    background-color: #003813c7;
+    background-color: #00270d6b;
     transition: all .9s;
 }
 .double>input:focus{
-    background-color: #004216c7;
+    background-color: #00270d6b;
     transition: all .9s;
 }
 .double>input:hover{
-    background-color: #003813c7;
+    background-color: #00270d6b;
+    transition: all .9s;
+}
+.put-before>input:focus, .put-before>textarea:focus{
+    background-color: #00270d6b;
+    transition: all .9s;
+}
+.put-before>input:active, .put-before>textarea:active{
+    background-color: #00270d6b;
     transition: all .9s;
 }
 .put-before:active::before{
