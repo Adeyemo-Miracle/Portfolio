@@ -1,6 +1,8 @@
 const loadingCount = document.querySelector('.loading-count')
 const main = document.querySelector('main')
+const submit = document.querySelector('.submit-button')
 let count = 0
+
 function int (){
     setInterval(blur, 30)
 }

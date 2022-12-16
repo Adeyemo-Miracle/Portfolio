@@ -8,6 +8,23 @@
   *{
     box-sizing: border-box;
   }
+
+@keyframes animation {
+    from{
+        right: 0px;
+        transform: scaleX(0);
+        opacity: 1;
+        width: 10px;
+        height: 100%;
+    }
+    to{
+        right: 200px;
+        transform: scaleX(100);
+        opacity: 0.5;
+        width: 20px;
+        height: 100%;
+    }
+}
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: rgb(235, 235, 235);
@@ -31,6 +48,44 @@ body{
     background: linear-gradient(#1e942e79, #00270de8),  url(https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+}
+.put-before{
+    position: relative;
+    overflow: hidden;
+}
+.double>input:active{
+    background-color: #003813c7;
+    transition: all .9s;
+}
+.double>input:focus{
+    background-color: #004216c7;
+    transition: all .9s;
+}
+.double>input:hover{
+    background-color: #003813c7;
+    transition: all .9s;
+}
+.put-before:active::before{
+    animation: animation;
+    animation-duration: .9s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.put-before:hover::before{
+    animation: animation;
+    animation-duration: .9s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+.put-before::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #00270de8;
+    z-index: -1;
+    top: 0;
+    right: 0;
 }
 .loading-count{
     position: absolute;
@@ -51,6 +106,7 @@ form{
 }
 
 input, textarea{
+    position: relative;
     outline: none;
     padding: 0 5px;
     color: white;
@@ -62,7 +118,9 @@ input, textarea{
     font-weight: 300;
 }
 .submit-button{
+    width: 100%;
     font-weight: 200;
+    position: relative;
 }
 
 input{
@@ -75,6 +133,7 @@ input{
 }
 .double input{
     width: 47%;
+    transition: all .9s;
 }
 @media (max-height: 350px) {
     body{
